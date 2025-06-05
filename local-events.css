@@ -1,0 +1,273 @@
+/* Import your custom font */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('Spongeboytt2Regular-ALLjx.ttf') format('truetype');
+}
+
+body {
+    font-family: 'CustomFont', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('bgimage.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #2C2C54;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: rgba(0, 123, 255, 0.8);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #FF5722;
+    color: white;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.header img {
+    width: 20%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Announcement Section */
+.announce {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(30% - 40px);
+    max-width: calc(30% - 40px);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    text-decoration: none;
+    color: #2C2C54;
+}
+
+.announce:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.announce img {
+    width: 60%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.announce h2 {
+    font-size: 1.7rem;
+    color: #FF5722;
+    margin-bottom: 10px;
+}
+
+.announce li {
+    color: #2C2C54;
+    font-size: 1.5rem;
+}
+
+/* Card Styling */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(30% - 40px);
+    max-width: calc(30% - 40px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    text-decoration: none;
+    color: #2C2C54;
+    height: auto;
+}
+
+.card img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: #FF5722;
+    margin-bottom: 10px;
+}
+
+/* Make the description box hidden by default */
+.card .description {
+    display: block;
+    opacity: 0;
+    max-height: 0;
+    position: absolute; /* Position it over the card */
+    bottom: 0; /* Align it to the bottom of the card */
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #333;
+    transition: opacity 0.3s ease, max-height 0.3s ease, padding 0.3s ease;
+    z-index: 10;
+}
+
+.card:hover .description {
+    opacity: 1;
+    max-height: 200px; /* Adjust this value as needed */
+    padding: 20px; /* Increase padding when hovered */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    z-index: 20; /* Ensure the hovered card is above others */
+}
+
+/* Hero Section */
+.hero {
+    flex: 1 1 100%;
+    max-width: 100%;
+    background-color: #FFD700;
+    color: #2C2C54;
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(45% - 40px);
+        max-width: calc(45% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.date-location-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.date-box,
+.location-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7B731; /* Orange color for Date Box */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.location-box {
+    background-color: #34a853; /* Green color for Location Box */
+    font-size: 18px;
+    padding: 15px 20px;
+    width: 100%;
+}
+
+.date-box {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.title {
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #2C2C54;
+}

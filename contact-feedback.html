@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Feedback</title>
+    <link rel="stylesheet" href="stylepage.css">
+    <style>
+        body {
+            background: url('bgimage.png') no-repeat center center fixed; 
+            background-size: cover;
+            filter: brightness(100%);
+            color: #ffffff; 
+        }
+
+        /* Header Styles */
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .highlight-heading {
+            font-size: 36px;
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        /* Main Section Styles */
+        .main {
+            padding: 20px;
+        }
+
+        /* Container for the map and contact form side by side */
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        iframe {
+            flex: 1;
+            height: 50vh; /* Make the map take up half the height */
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+        }
+
+        form {
+            flex: 1;
+            max-width: 400px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        form label, .feedback-section h2 {
+            font-size: 16px;
+            color: #ffffff; 
+            margin-bottom: 5px;
+        }
+
+        form input, form textarea, form button, .feedback-section textarea, .feedback-section button {
+            width: 95%;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form input, form textarea, .feedback-section textarea {
+            background: rgba(255, 255, 255, 0.8);
+            color: #000; 
+        }
+
+        form button, .feedback-section button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover, .feedback-section button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Feedback Section */
+        .feedback-section {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .feedback-section textarea {
+            height: 100px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            padding: 10px;
+            color: black;
+            margin-top: 20px;
+        }
+    </style> 
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="community-news.html">Community News</a></li>
+            <li><a href="local-events.html">Local Events</a></li>
+            <li><a href="local-businesses.html">Local Businesses</a></li>
+            <li><a href="resource-center.html">Resource Center</a></li>
+            <li><a href="contactus.html">Contact & Feedback</a></li>
+        </ul>
+    </nav>
+    <div class="header">
+        <a href="homepage.html">
+            <img src="logo.png" alt="Spongebob">
+        </a>
+    </div>
+    <div class="header">
+        <h1 class="highlight-heading">Contact & Feedback</h1>
+    </div>
+    <div class="main">
+        <div class="content-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.239844089477!2d73.01280191482377!3d33.65653767418616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbe1faaaaaaab%3A0x223386a2985e88f4!2sFAST%20National%20University%20of%20Computer%20and%20Emerging%20Sciences%2C%20Islamabad%20Campus!5e0!3m2!1sen!2s!4v1697718334555!5m2!1sen!2s" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="feedback-section">
+            <h2>Feedback</h2>
+            <textarea id="feedback" name="feedback" rows="5" placeholder="Write your feedback here..."></textarea>
+            <button type="submit">Send Feedback</button>
+        </div>
+    </div>
+    <footer>
+        <p>Made with love under the sea | Contact us for inquiries | © 2024 Bikini Bottom</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* Import your custom font */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('Spongeboytt2Regular-ALLjx.ttf') format('truetype');
+}
+
+body {
+    font-family: 'CustomFont', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('bgimage.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #2C2C54;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: rgba(0, 123, 255, 0.8);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #FF5722;
+    color: white;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.header img {
+    width: 20%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Large Card Styling */
+.card.big-card {
+    width: 100%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 2rem;
+    color: #FF5722;
+    margin-bottom: 20px;
+}
+
+/* Buttons Styling */
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Description Cards */
+.description-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+}
+
+.description-card h3 {
+    font-size: 1.8rem;
+    color: #FF5722;
+    margin-bottom: 10px;
+}
+
+.description-card p {
+    font-size: 1.1rem;
+    color: #2C2C54;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
